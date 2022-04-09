@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200;300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anek Bangla", sans-serif;
+}
+
+body {
+  background: #00bfff url("../assets/images/deep-sky.jpg") center center/cover
+    no-repeat fixed;
+  color: white;
+}
+
+.App {
+  text-align: center;
+}
