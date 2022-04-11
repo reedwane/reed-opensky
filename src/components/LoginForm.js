@@ -58,7 +58,7 @@ const LoginForm = () => {
           </p>
         )}
         <input
-          className="login--input"
+          className="login-password"
           type={password}
           name="password"
           placeholder="password"

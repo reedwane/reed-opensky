@@ -49,7 +49,15 @@ export const LoginWrapper = styled.div`
       outline: none;
     }
 
-    .error {
+    .fa-eye,
+    .fa-eye-slash {
+      position: relative;
+      top: -1.7em;
+      left: 90%;
+    }
+
+    .error,
+    .submit-error {
       color: ${errorColor};
       font-size: 0.7rem;
       line-height: 90%;
@@ -62,6 +70,11 @@ export const LoginWrapper = styled.div`
       border: none;
       border-radius: 10px;
       background-color: ${primaryColor};
+    }
+
+    .submit-error {
+      margin-top: 1em;
+      display: block;
     }
   }
 
