@@ -19,6 +19,10 @@ const Home = () => {
   return (
     <>
       <h2>Flight Details from Airports around the World</h2>
+      <p>
+        Displayed in the format: <br />
+        Airport code | Time | Arriving | Departing
+      </p>
       {isLoading && <Loading />}
       {dataList && (
         <>

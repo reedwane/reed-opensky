@@ -1,4 +1,5 @@
 import { useDataContext } from "contexts/DataContext";
+import { PageIndexWrapper } from "styles/styledComponents/pageIndexWrapper";
 
 const PageIndex = ({ number }) => {
   const { setPageIndex } = useDataContext();
@@ -13,13 +14,13 @@ const PageIndex = ({ number }) => {
   };
 
   return (
-    <>
+    <PageIndexWrapper>
       {arr.map((num) => (
         <span className="page-index" key={num} onClick={() => handleIndex(num)}>
           {num}
         </span>
       ))}
-    </>
+    </PageIndexWrapper>
   );
 };
 

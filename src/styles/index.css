@@ -8,11 +8,8 @@
 }
 
 body {
-  background: #00bfff url("../assets/images/deep-sky.jpg") center center/cover
+  background: rgb(0, 29, 76) url("../assets/images/bg.png") center center/cover
     no-repeat fixed;
   color: white;
-}
-
-.App {
-  text-align: center;
+  /* color: #ffffff40; */
 }

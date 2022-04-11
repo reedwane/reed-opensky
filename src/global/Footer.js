@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
+import { FooterWrapper } from "styles/styledComponents/footerWrapper";
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterWrapper>
       <div className="footer footer--attribution">
         <p className="attribution-text">
           Created by{" "}
-          <Link className="link footer--link" to="https://github.com/reedwane">
-            Abudlkareem Ridwan
-          </Link>
+          <a href="https://github.com/reedwane">Abdulkareem Ridwan</a>
         </p>
         <span>&copy; Ridwan Abdulkareem 2022</span>
       </div>
-    </footer>
+    </FooterWrapper>
   );
 };
 

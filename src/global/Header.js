@@ -1,5 +1,7 @@
 import { useDataContext } from "contexts/DataContext";
 import { Link } from "react-router-dom";
+import logo from "assets/images/logo.png";
+import { HeaderWrapper } from "styles/styledComponents/headerWrapper";
 
 const Header = () => {
   const { name, setName } = useDataContext();
@@ -10,13 +12,13 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <h2 className="header--logo">reedwane</h2>
+    <HeaderWrapper className="header">
+      <img src={logo} alt="logo" />
 
       <nav className="nav">
         {!name && (
           <>
-            <span>Welcome Voyager</span>
+            <span>Welcome Voyager!</span>
           </>
         )}
 
@@ -30,7 +32,7 @@ const Header = () => {
           </>
         )}
       </nav>
-    </header>
+    </HeaderWrapper>
   );
 };
 

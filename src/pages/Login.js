@@ -1,17 +1,18 @@
 import LoginForm from "components/LoginForm";
-import styled from "styled-components";
+import welcome from "assets/images/welcome.png";
+import { LoginWrapper } from "styles/styledComponents/loginWrapper";
 
 const Login = () => {
   return (
-    <div className="login">
+    <LoginWrapper>
       <h1>Login</h1>
-      <LoginForm />
-    </div>
+
+      <div className="form-content">
+        <img src={welcome} alt="" />
+        <LoginForm />
+      </div>
+    </LoginWrapper>
   );
 };
-
-const LoginPage = styled.div`
-  background: white;
-`;
 
 export default Login;
