@@ -39,6 +39,9 @@ const useFetch = () => {
   //   }
   // };
 
+  let time = Date(end).split(" ")[4].split(":"); // get the hour alone. e.g ['15', '26', '33']
+  setTime(`${time[0]}:${time[1]}${time[0] > 12 ? "PM" : "AM"} CST`); //set the time in the context api
+
   const getData = async (list) => {
     let dataArray = [];
     for (let icao of list) {
@@ -75,9 +78,6 @@ const useFetch = () => {
     (async () => {
       try {
         const index = pageIndex * 20;
-
-        let time = Date(end).split(" ")[4].split(":"); // get the hour alone. e.g ['15', '26', '33']
-        setTime(`${time[0]}:${time[1]}${time[0] > 12 ? "PM" : "AM"} CST`); //set the time in the context api
 
         setLoading(true);
         const list = icaoList.slice(index - 20, index);

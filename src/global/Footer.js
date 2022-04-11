@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FooterWrapper } from "styles/styledComponents/footerWrapper";
 
 const Footer = () => {
