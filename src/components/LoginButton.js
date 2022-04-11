@@ -18,7 +18,9 @@ const LoginButton = ({ details }) => {
         Login
       </button>
 
-      {detailError && <span className="submit-error">fill in all details</span>}
+      {detailError && (
+        <span className="submit-error">please validate details</span>
+      )}
     </>
   );
 };

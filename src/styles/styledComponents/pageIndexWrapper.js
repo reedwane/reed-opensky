@@ -16,11 +16,11 @@ export const PageIndexWrapper = styled.footer`
     margin: 1%;
     color: ${textwhite};
     border: 1px solid ${secondaryColor};
+    font-weight: 300;
 
     &:hover {
       background-color: ${textwhite};
       color: ${primaryColor};
-      font-weight: 300;
     }
   }
 `;

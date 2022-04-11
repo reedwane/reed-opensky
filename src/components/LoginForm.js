@@ -19,7 +19,7 @@ const LoginForm = () => {
         Name
         {state.nameError && (
           <p className="error error--name">
-            Please input a name not less than 2 characters
+            Please input a name not less than 2 and not more than 40 characters
           </p>
         )}
         <input
