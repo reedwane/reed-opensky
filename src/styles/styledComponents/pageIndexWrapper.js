@@ -14,6 +14,7 @@ export const PageIndexWrapper = styled.footer`
     width: 1.5em;
     padding: 0.1em;
     margin: 1%;
+    color: ${textwhite};
     border: 1px solid ${secondaryColor};
 
     &:hover {
