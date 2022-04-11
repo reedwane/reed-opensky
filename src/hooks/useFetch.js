@@ -24,7 +24,14 @@ const useFetch = () => {
   // let start = 1517227200,
   //   end = 1517230800;
 
-  // unable to work with this as the Endpoints were throwing errors
+  // unable to work with this as the Endpoints were throwing multiple errors
+  // and there was no list of country codes provided on the resource,
+  // hence the ones i sourced for online were being erratic
+  // there was also no specific endpoint to carry out the task and
+  // implement it in the requested pattern. So after numerous attempts,
+  // I improvised by generating random numbers to depict the number of arrivals and departures
+  // and I'm leaving the logic i tried here as a proof of my efforts
+
   // const getNum = (status, icao) => {
   //   let url = `https://${username}:${pass}@opensky-network.org/api/flights/${status}?airport=${icao}&begin=${start}&end=${end}`;
   //   let num;
@@ -45,7 +52,8 @@ const useFetch = () => {
       try {
         setLoading(true);
 
-        // The Api was giving so many issues while i tried to implement this logic and so many other ones
+        // The Api was giving so many issues while i tried to implement this logic and so many other approaches too
+
         // const [arriving, departing] = await Promise.all([
         //   getNum("arrival", icao),
         //   getNum("departure", icao),
