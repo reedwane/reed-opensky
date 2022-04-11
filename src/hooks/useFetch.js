@@ -81,6 +81,7 @@ const useFetch = () => {
 
         setLoading(true);
         const list = icaoList.slice(index - 20, index);
+        // const list = icaoList.slice(0, 20);
 
         const data = await getData(list);
 

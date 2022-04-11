@@ -10,6 +10,7 @@ import { DashboardWrapper } from "styles/styledComponents/dashboardWrapper";
 
 const Home = () => {
   const array = icaoList;
+  const { time } = useDataContext();
 
   useAuth();
   useFetch();
@@ -27,7 +28,7 @@ const Home = () => {
       {isLoading && <Loading />}
       {dataList && (
         <>
-          <AirportList dataList={dataList} />
+          <AirportList dataList={dataList} time={time} />
         </>
       )}
 

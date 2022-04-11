@@ -1,8 +1,7 @@
 import { useDataContext } from "contexts/DataContext";
 import { AirportListWrapper } from "styles/styledComponents/airportListWrapper";
 
-const AirportList = ({ dataList }) => {
-  const { time } = useDataContext();
+const AirportList = ({ dataList, time }) => {
   return (
     <AirportListWrapper>
       {dataList.map((data) => (

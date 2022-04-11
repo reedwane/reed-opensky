@@ -6,7 +6,7 @@ const PageIndex = ({ number }) => {
   let n = number / 20;
   let arr = [];
   for (let i = 0; i < n; i++) {
-    arr.push(i + 1);
+    arr.push(i + 1); //page indexes array
   }
 
   const handleIndex = (n) => {
