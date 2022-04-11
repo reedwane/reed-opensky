@@ -1,16 +1,25 @@
 import styled from "styled-components";
-import { secondaryColor } from "styles/variables/styleVariables";
+import {
+  primaryColor,
+  secondaryColor,
+  textwhite,
+} from "styles/variables/styleVariables";
 
 export const PageIndexWrapper = styled.footer`
   margin-top: 1em;
-  height: 2em;
 
   span {
     cursor: pointer;
     display: inline-block;
-    width: 2em;
-    padding: 0.2em;
-    margin: 0 1%;
+    width: 1.5em;
+    padding: 0.1em;
+    margin: 1%;
     border: 1px solid ${secondaryColor};
+
+    &:hover {
+      background-color: ${textwhite};
+      color: ${primaryColor};
+      font-weight: 300;
+    }
   }
 `;

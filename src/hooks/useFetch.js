@@ -8,7 +8,7 @@ const useFetch = () => {
   //   username = "reedwane";
 
   const { setLoading } = useLoadingContext();
-  const { pageIndex, setDataList, setTime } = useDataContext();
+  const { setDataList, setTime } = useDataContext();
 
   const multipleOfTen = (x) => {
     return Math.ceil(x / 10) * 10; //api only accepts multiple of 5 seconds
@@ -38,9 +38,6 @@ const useFetch = () => {
   //     return 0;
   //   }
   // };
-
-  let time = Date(end).split(" ")[4].split(":"); // get the hour alone. e.g ['15', '26', '33']
-  setTime(`${time[0]}:${time[1]}${time[0] > 12 ? "PM" : "AM"} CST`); //set the time in the context api
 
   const getData = async (list) => {
     let dataArray = [];
@@ -77,13 +74,11 @@ const useFetch = () => {
   useEffect(() => {
     (async () => {
       try {
-        const index = pageIndex * 20;
+        let time = Date(end).split(" ")[4].split(":"); // get the hour alone. e.g ['15', '26', '33']
+        setTime(`${time[0]}:${time[1]}${time[0] > 12 ? "PM" : "AM"} CST`); //set the time in the context api
 
         setLoading(true);
-        const list = icaoList.slice(index - 20, index);
-        // const list = icaoList.slice(0, 20);
-
-        const data = await getData(list);
+        const data = await getData(icaoList);
 
         setDataList(data);
         setLoading(false);
@@ -91,7 +86,7 @@ const useFetch = () => {
         console.log(error);
       }
     })();
-  }, [pageIndex]);
+  }, []);
 };
 
 export default useFetch;

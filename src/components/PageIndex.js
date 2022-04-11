@@ -1,8 +1,6 @@
-import { useDataContext } from "contexts/DataContext";
 import { PageIndexWrapper } from "styles/styledComponents/pageIndexWrapper";
 
-const PageIndex = ({ number }) => {
-  const { setPageIndex } = useDataContext();
+const PageIndex = ({ number, data, setData }) => {
   let n = number / 20;
   let arr = [];
   for (let i = 0; i < n; i++) {
@@ -10,7 +8,9 @@ const PageIndex = ({ number }) => {
   }
 
   const handleIndex = (n) => {
-    setPageIndex(n);
+    let num = n * 20; // the index of the last data entry to be sliced
+
+    setData(data.slice(num - 20, num));
   };
 
   return (

@@ -10,7 +10,6 @@ export const useDataContext = () => {
 export const DataProvider = ({ children }) => {
   const [name, updateName] = useState("");
   const [dataList, updateList] = useState(null);
-  const [pageIndex, updatePageIndex] = useState(1);
   const [time, updateTime] = useState("15:00 PM CST");
 
   const setName = (name) => {
@@ -19,10 +18,6 @@ export const DataProvider = ({ children }) => {
 
   const setDataList = (list) => {
     updateList(list);
-  };
-
-  const setPageIndex = (n) => {
-    updatePageIndex(n);
   };
 
   const setTime = (t) => {
@@ -34,8 +29,6 @@ export const DataProvider = ({ children }) => {
     setName,
     dataList,
     setDataList,
-    pageIndex,
-    setPageIndex,
     time,
     setTime,
   };

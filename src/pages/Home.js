@@ -1,7 +1,5 @@
-import { icaoList } from "assets/data/icao";
 import AirportList from "components/AirportList";
 import Loading from "components/Loading";
-import PageIndex from "components/PageIndex";
 import { useDataContext } from "contexts/DataContext";
 import { useLoadingContext } from "contexts/LoadingContext";
 import useAuth from "hooks/useAuth";
@@ -9,7 +7,6 @@ import useFetch from "hooks/useFetch";
 import { DashboardWrapper } from "styles/styledComponents/dashboardWrapper";
 
 const Home = () => {
-  const array = icaoList;
   const { time } = useDataContext();
 
   useAuth();
@@ -31,8 +28,6 @@ const Home = () => {
           <AirportList dataList={dataList} time={time} />
         </>
       )}
-
-      <PageIndex number={array.length} />
     </DashboardWrapper>
   );
 };
