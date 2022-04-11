@@ -15,7 +15,6 @@ export const HeaderWrapper = styled.header`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: scroll;
 
   img {
     cursor: pointer;
@@ -34,7 +33,7 @@ export const HeaderWrapper = styled.header`
     align-self: center;
     width: 60%;
     height: 2em;
-    overflow-y: scroll;
+    overflow: hidden;
   }
 
   a {
